@@ -8,7 +8,6 @@ public class Assignment {
         String fileName = "assignment.txt";
         String content = "Java File Handling Practice";
 
-        // Step 1: Create and write to file
         try (FileWriter writer = new FileWriter(fileName)) {
             writer.write(content);
             System.out.println("File created and content written successfully.");
@@ -17,7 +16,7 @@ public class Assignment {
             return;
         }
 
-        // Step 2: Read from file
+       
         try {
             String fileContent = Files.readString(new File(fileName).toPath());
             System.out.println(" Content read from file: " + fileContent);
@@ -26,7 +25,7 @@ public class Assignment {
             return;
         }
 
-        // Step 3: Delete file
+        
         File file = new File(fileName);
         if (file.delete()) {
             System.out.println(" File deleted successfully.");
